@@ -29,6 +29,7 @@ const int mod = 1e9 + 7;
 
 int main()
 {
-    cout << ((10 % mod) * (power(3, mod - 2, mod) % mod) % mod) % mod << endl;
+    cout << ((4 % 4) - (9 % 4) + 4) % 4 << endl;  // Expected 3 recieved 3
+    cout << ((10 % mod) * (power(3, mod - 2, mod) % mod) % mod) % mod << endl; // divison
     return 0;
 }
