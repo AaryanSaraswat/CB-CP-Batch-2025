@@ -41,8 +41,8 @@ int f(int index,int modVal,bool isTight,bool isTight2,string &a,string &b,int d,
     int low = isTight2? a[index-1]-'0' : 0;
     int limit = isTight? b[index-1]-'0' : 9;
     for(int digit=low;digit<=limit;digit++){
-        int newTight = isTight && (digit==low);
-        int newTight2 = isTight2 && (digit==limit);
+        int newTight = isTight && (digit==limit);
+        int newTight2 = isTight2 && (digit==low);
         if(((index&1) and digit!=d) or (index%2==0 and digit==d)) 
             ans=(ans+f(index+1,(modVal*10+digit)%m,newTight,newTight2,a,b,d,m))%MOD;  
     }
